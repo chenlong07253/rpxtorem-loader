@@ -1,6 +1,6 @@
 {
   "name": "rpxtorem-loader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "rpx to rem",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,13 @@
   },
   "keywords": [
     "rpx",
-    "rem"
+    "rem",
+    "rpxtorem"
   ],
   "author": "chenlong07253",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chenlong07253/rpxtorem-loader.git"
   },
-  "license": "MIT",
-  "dependencies": {
-    
-  }
+  "license": "MIT"
 }
