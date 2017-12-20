@@ -11,12 +11,12 @@ module.exports = function (source, map) {
     if (params.remBase) config.remBase = parseInt(params.remBase, 10) || config.remBase;
     if (params.useRem === false) config.useRem = false;
 
-    source = source.replace(/\:\s*([-\d\.]+)rpx/gi, function (a, b) {
+    source = source.replace(/([:\s]\s*)([-\d\.]+)rpx/gi, function (a, b, c) {
 
-        if (!config.useRem) return ': ' + b + 'px';
+        if (!config.useRem) return b + c + 'px';
 
-        b = parseFloat(b) / config.remBase;
-        return ': ' + b + 'rem';
+        c = parseFloat(c) / config.remBase || 0;
+        return b + c + 'rem';
     });
 
     this.callback(null, source, map);
