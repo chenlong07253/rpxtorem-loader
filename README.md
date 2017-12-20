@@ -1,6 +1,7 @@
 # rpxtorem-loader
 rpx to rem
 
+配合js改动html的font-size大小自适应
 ``` go
 
 !(function () {
