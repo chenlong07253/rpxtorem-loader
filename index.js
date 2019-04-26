@@ -7,7 +7,7 @@ module.exports = function (source, map) {
         remBase: 20, // 默认rem基数 1rem = 20rpx 
         useRem: true, // true:使用rem  false:使用px 1px = 1rpx
     };
-    var params = loaderUtils.parseQuery(this.query);
+    var params = loaderUtils.getOptions(this) || {};
     if (params.remBase) config.remBase = parseInt(params.remBase, 10) || config.remBase;
     if (params.useRem === false) config.useRem = false;
 
