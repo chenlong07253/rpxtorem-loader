@@ -3,7 +3,7 @@
     function setSize() {
         var width = document.documentElement.clientWidth;
         width = width < 320 ? 320 : width > 768 ? 768 : width;
-        var zoom = (width / 375).toFixed(1);
+        var zoom = width / 375;
         document.documentElement.style.fontSize = zoom * remBase + "px";
     };
     setSize();
