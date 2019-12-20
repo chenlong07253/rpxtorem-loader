@@ -9,8 +9,8 @@ module.exports = function (source, map) {
     };
     var params = {}
     try {
-      if (loaderUtils.getOptions) params = loaderUtils.getOptions(this)
-      else if (loaderUtils.parseQuery) params = loaderUtils.parseQuery(this.query)
+      if (loaderUtils.getOptions) params = loaderUtils.getOptions(this) || {}
+      else if (loaderUtils.parseQuery) params = loaderUtils.parseQuery(this.query) || {}
     } catch (error) { }
     if (params.remBase) config.remBase = parseInt(params.remBase, 10) || config.remBase;
     if (params.useRem === false) config.useRem = false;
