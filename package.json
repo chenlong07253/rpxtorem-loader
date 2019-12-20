@@ -1,6 +1,6 @@
 {
   "name": "rpxtorem-loader",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "rpx to rem",
   "main": "index.js",
   "scripts": {

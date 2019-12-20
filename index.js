@@ -15,7 +15,7 @@ module.exports = function (source, map) {
     if (params.remBase) config.remBase = parseInt(params.remBase, 10) || config.remBase;
     if (params.useRem === false) config.useRem = false;
 
-    source = source.replace(/([:\s\(]\s*)([-\d\.\s]+)rpx/gi, function (a, b, c) {
+    source = source.replace(/([:\s\(]\s*)([-\d\.]+)\s*rpx/gi, function (a, b, c) {
 
         if (!config.useRem) return b + c + 'px';
 
